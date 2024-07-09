@@ -47,11 +47,15 @@
             },
         }],
         ['OS=="linux"', {
-            'dependencies':
-            [
-              'angle/src/angle.gyp:libEGL',
-              'angle/src/angle.gyp:libGLESv2'
-            ]
+            'libraries': [
+              '-lEGL',
+              '-lGLESv2'
+            ],
+            # 'dependencies':
+            # [
+            #   'angle/src/angle.gyp:libEGL',
+            #   'angle/src/angle.gyp:libGLESv2'
+            # ]
         }],
         ['OS=="win"', {
             'library_dirs': [
